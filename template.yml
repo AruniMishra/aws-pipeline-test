@@ -12,5 +12,5 @@ Resources:
         MyTimeApi:
           Type: Api
           Properties:
-            Path: /test-pipeline-acg
+            Path: /aruni-aws-pipeline-test
             Method: GET
