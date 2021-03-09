@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "f604c2f2-bcf2-49d3-bdc9-4a9edd125f43",
+		"name": "aruni-aws-pipeline-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://5bqfwk0s47.execute-api.us-east-1.amazonaws.com/Prod/aruni-aws-pipeline-test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status test', function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test('Body match', function() {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Aruni\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://5bqfwk0s47.execute-api.us-east-1.amazonaws.com/Prod/aruni-aws-pipeline-test",
+					"protocol": "https",
+					"host": [
+						"5bqfwk0s47",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"Prod",
+						"aruni-aws-pipeline-test"
+					]
+				},
+				"description": "aruni-aws-pipeline-test"
+			},
+			"response": []
+		}
+	]
+}
